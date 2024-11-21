@@ -1,6 +1,6 @@
 print("Este programa determina el mayor número de tres que introduzcas")
-continuar = input("¿Quieres continuar? (si/no): ").strip().lower()
-if continuar == "sí" or continuar == "si":
+    continuar = input("¿Quieres continuar? (si/no): ").strip().lower()
+    if continuar == "sí" or continuar == "si":
     # Aquí, ya el usario accedió a continuar, así que proceguirá a pedirle 3 números
     while True:
         try:
