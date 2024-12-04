@@ -1,0 +1,42 @@
+Proceso EncuentraMayorEnArreglo
+    Definir longitud Como Entero;
+    Definir numeros Como Entero;
+    Definir mayor Como Entero;
+    longitud <- obtenerTamañoArreglo;
+	
+    Dimension numeros(longitud);
+    generarArregloAleatorio(longitud, numeros);
+	
+    Escribir "Éxito: Arreglo generado.";
+    Para indice <- 1 Hasta longitud Hacer
+        Escribir "Valor ", indice, ": ", numeros(indice);
+    FinPara
+	
+    mayor <- encontrarMayor(longitud, numeros);
+    Escribir "Valor más grande: ", mayor;
+FinProceso
+
+Funcion tamaño <- obtenerTamañoArreglo
+    Definir tamaño Como Entero;
+    Escribir "Ingrese el tamaño del arreglo:";
+    Leer tamaño;
+FinFuncion
+
+Subproceso generarArregloAleatorio(longitud, arreglo)
+    Definir contador Como Entero;
+    
+    Para contador <- 1 Hasta longitud Hacer
+        arreglo(contador) <- Aleatorio(1, 100); 
+    FinPara
+FinSubproceso
+
+Funcion mayor <- encontrarMayor(longitud, arreglo)
+    Definir mayor, contador Como Entero;
+    mayor <- arreglo(1);
+	
+    Para contador <- 2 Hasta longitud Hacer
+        Si arreglo(contador) > mayor Entonces
+            mayor <- arreglo(contador);
+        FinSi
+    FinPara
+FinFuncion
